@@ -8,6 +8,6 @@ before_script:
 script:
   - cmake ../mp2-lab2-matrix
   - make -j
-  - ./vector/vector
+  - ./test/MATRIX_TESTS
 notifications:
   email: false
