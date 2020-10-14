@@ -6,7 +6,7 @@ before_script:
   - mkdir ../build
   - cd ../build
 script:
-  - cmake ../mp2-lab2-Matrix
+  - cmake ../mp2-lab2-matrix
   - make -j
   - ./vector/vector
 notifications:
