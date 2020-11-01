@@ -226,9 +226,9 @@ public:
 template <class ValType>
 TMatrix<ValType>::TMatrix(int s) : TVector<TVector<ValType> >(s)
 {
-  if (MAX_MATRIX_SIZE < Size) throw ("Illegal argument");
-  for (int i = 0; i < Size; i++)
-    pVector[i] = TVector<ValType>(Size, i);
+  if (MAX_MATRIX_SIZE < s) throw ("Illegal argument");
+  for (int i = 0; i < s; i++)
+    pVector[i] = TVector<ValType>(s, i);
 } /*-------------------------------------------------------------------------*/
 
 template <class ValType> // конструктор копирования
@@ -244,7 +244,7 @@ bool TMatrix<ValType>::operator==(const TMatrix<ValType>& mt) const
 {
   if (this != &mt)
   {
-    if (Size != mt.Size) return false;
+    if (TMatrix->Size != mt.Size) return false;
     for (int i = 0; i < Size; i++)
       if (pVector[i] != mt.pVector[i]) return false;
   }
